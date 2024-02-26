@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Entry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Internship Entry Form</h2>
+
+  <form id="internshipForm" action="process_internship.php" method="post">
+    <label for="internshipTitle">Internship Title:</label>
+    <input type="text" id="internshipTitle" name="internshipTitle" required>
+
+    <label for="requirements">Requirements:</label>
+    <textarea id="requirements" name="requirements" rows="4" required></textarea>
+
+    <label for="duration">Duration (in weeks):</label>
+    <input type="number" id="duration" name="duration" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="applicationDeadline">Application Deadline:</label>
+    <input type="date" id="applicationDeadline" name="applicationDeadline" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

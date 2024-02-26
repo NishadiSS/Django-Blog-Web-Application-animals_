@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    div {
+      margin-bottom: 16px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 20px 35px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease; /* Added transition effect */
+    }
+ 
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+  <form>
+   
+    <label for="field">Field of Internship Interests:</label>
+    <select id="field" name="field" required>
+      <option value="IT">Information Technology</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Finance">Finance</option>
+      <option value="Engineering">Engineering</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label>Skills:</label>
+    <div>
+      <input type="checkbox" id="html" name="skills" value="HTML">
+      <label for="html">HTML</label>
+
+      <input type="checkbox" id="css" name="skills" value="CSS">
+      <label for="css">CSS</label>
+
+      <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+      <!-- Add more checkboxes for other skills -->
+    </div>
+
+    <label for="experiences">Experiences:</label>
+    <textarea id="experiences" name="experiences" required></textarea>
+
+    <label for="projects">Related Projects:</label>
+    <textarea id="projects" name="projects" required></textarea>
+
+    <a href="{% url 'dashboard' %}"> <button input type="submit" value="Submit">Submit</button> </a>
+  </form>
+</body>
+</html>
